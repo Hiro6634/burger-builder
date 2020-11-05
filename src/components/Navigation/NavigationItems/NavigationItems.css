@@ -10,6 +10,6 @@
 
 @media (min-width: 500px ){
     .NavigationItems {
-        flex-flow: raw;
+        flex-flow: row;
     }    
 }
