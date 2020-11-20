@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Layout from './hoc/Layout/Layout';
 import BurguerBuilder from './containers/BurguerBuilder/BurguerBuilder';
+import Checkout from './containers/Checkout/Checkout';
 
 class App extends Component {
   // state = {
@@ -18,6 +19,7 @@ class App extends Component {
         <Layout>
           {/* {this.state.show? <BurguerBuilder />: null} */}
           <BurguerBuilder />
+          <Checkout/>
         </Layout>
       </div>
     );
