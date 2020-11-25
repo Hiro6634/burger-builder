@@ -11,7 +11,7 @@ class App extends Component {
         <Layout>
           <Switch>
             <Route path="/checkout" component={Checkout}/>
-            <Route path="/" component={BurguerBuilder}/>
+            <Route path="/" exact component={BurguerBuilder}/>
           </Switch>
         </Layout>
       </div>
