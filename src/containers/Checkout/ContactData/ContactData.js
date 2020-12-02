@@ -20,7 +20,8 @@ class ContactData extends Component {
                     required: true
                 },
                 valid: false,
-                touched: false
+                touched: false,
+                errorMessage: 'Please enter a valid Name'
             },
             street: {
                 elementType: 'input',
@@ -33,7 +34,8 @@ class ContactData extends Component {
                     required: true
                 },
                 valid: false,
-                touched: false
+                touched: false,
+                errorMessage: 'Please enter a valid Street'
             },
             zipCode:  {
                 elementType: 'input',
@@ -48,7 +50,8 @@ class ContactData extends Component {
                     maxLength: 5
                 },
                 valid: false,
-                touched: false
+                touched: false,
+                errorMessage: 'Please enter a valid ZIP Code'
             },
             country: {
                 elementType: 'input',
@@ -61,7 +64,8 @@ class ContactData extends Component {
                     required: true
                 },
                 valid: false,
-                touched: false
+                touched: false,
+                errorMessage: 'Please enter a valid Country'
             },  
             email: {
                 elementType: 'input',
@@ -74,7 +78,8 @@ class ContactData extends Component {
                     required: true
                 },
                 valid: false,
-                touched: false
+                touched: false,
+                errorMessage: 'Please enter a valid E-Mail'
             },
             deliveryMethod:  {
                 elementType: 'select',
@@ -164,6 +169,7 @@ class ContactData extends Component {
                         invalid={!formElement.config.valid}
                         shouldValidate={formElement.config.validation}
                         touched={formElement.config.touched}
+                        errorMessage={formElement.config.errorMessage}
                         changed={(event) => this.inputChangedHandler(event, formElement.id)}/>
                 ))}
                 <Button btnType="Success">ORDER</Button>
