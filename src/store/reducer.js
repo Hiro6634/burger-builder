@@ -3,7 +3,7 @@ import * as actionTypes from './actions';
 const initialState = {
     ingredients: {
         salad: 0,
-        beacon: 0,
+        bacon: 0,
         cheese: 0,
         meat: 0
     },
