@@ -49,8 +49,9 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 error: true
             }
+        default:
+            return state;
     }
-    return state;
 }
 
 
