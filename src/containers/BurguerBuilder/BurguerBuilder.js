@@ -8,7 +8,7 @@ import Spinner from '../../components/UI/Spinner/Spinner';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 import axios from '../../axios-orders';
 import { connect } from 'react-redux';
-import * as actionTypes from '../../store/actions/actionTypes';
+import * as burguerBuilderActions from '../../store/actions/index';
 
 
 class BurguerBuilder extends Component{
@@ -106,8 +106,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch =>{
     return{
-        onIngredientsAdded: (ingName) => dispatch({type: actionTypes.ADD_INGREDIENT, ingredientName: ingName}) ,
-        onIngredientsRemoved: (ingName) => dispatch({type: actionTypes.REMOVE_INGREDIENT, ingredientName: ingName}) 
+        onIngredientsAdded: (ingName) => dispatch( burguerBuilderActions.addIngedients(ingName) ) ,
+        onIngredientsRemoved: (ingName) => dispatch( burguerBuilderActions.removeIngredient(ingName)) 
     };
 }
 export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(BurguerBuilder, axios));
