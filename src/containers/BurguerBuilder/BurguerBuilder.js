@@ -9,7 +9,7 @@ import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 import { connect } from 'react-redux';
 import axios from '../../axios-orders';
 
-import * as burguerBuilderActions from '../../store/actions/index';
+import * as actions from '../../store/actions/index';
 
 
 class BurguerBuilder extends Component{
@@ -46,6 +46,7 @@ class BurguerBuilder extends Component{
     }
 
     purchaseContiueHandler = () => {
+        this.props.onInitPurchase();
         this.props.history.push('/checkout');
     }
     
@@ -103,9 +104,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch =>{
     return{
-        onIngredientsAdded: (ingName) => dispatch( burguerBuilderActions.addIngedients(ingName) ) ,
-        onIngredientsRemoved: (ingName) => dispatch( burguerBuilderActions.removeIngredient(ingName)),
-        onInitIngredients: () => dispatch(burguerBuilderActions.initIngredients()) 
+        onIngredientsAdded: (ingName) => dispatch( actions.addIngedients(ingName) ) ,
+        onIngredientsRemoved: (ingName) => dispatch( actions.removeIngredient(ingName)),
+        onInitIngredients: () => dispatch(actions.initIngredients()),
+        onInitPurchase: () => dispatch(actions.purchaseInit()) 
     };
 }
 export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(BurguerBuilder, axios));
