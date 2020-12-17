@@ -21,8 +21,7 @@ class Layout extends Component{
     }
 
     render() {
-        console.log('[Layout] isAuth:', this.props.isAuthenticated);
-        return(
+         return(
             <Aux>
                 <Toolbar 
                     isAuth={this.props.isAuthenticated}

@@ -78,7 +78,7 @@ class BurguerBuilder extends Component{
                         purchasable={this.updatePurchaseState(this.props.ings)}
                         price={this.props.price}
                         ordered={this.purchaseHandler}
-                        isAuth={this.isAuthenticated}
+                        isAuth={this.props.isAuthenticated}
                     />
                 </Aux>
             );
