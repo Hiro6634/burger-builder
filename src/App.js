@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Layout from './hoc/Layout/Layout';
 import BurguerBuilder from './containers/BurguerBuilder/BurguerBuilder';
 import Checkout from './containers/Checkout/Checkout';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import Orders from './containers/Orders/Orders';
 import Auth from './containers/Auth/Auth';
 import Logout from './containers/Auth/Logout/Logout';
@@ -36,4 +36,4 @@ const mapDispatchToParms = dispatch => {
   };
 };
 
-export default connect(null, mapDispatchToParms)(App);
+export default withRouter( connect(null, mapDispatchToParms)(App));
