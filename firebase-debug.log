@@ -1,0 +1,58 @@
+[debug] [2020-12-18T15:29:32.228Z] ----------------------------------------------------------------------
+[debug] [2020-12-18T15:29:32.230Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\suyamaed\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-12-18T15:29:32.231Z] CLI Version:   9.0.1
+[debug] [2020-12-18T15:29:32.231Z] Platform:      win32
+[debug] [2020-12-18T15:29:32.231Z] Node Version:  v12.18.3
+[debug] [2020-12-18T15:29:32.234Z] Time:          Fri Dec 18 2020 12:29:32 GMT-0300 (Argentina Standard Time)
+[debug] [2020-12-18T15:29:32.234Z] ----------------------------------------------------------------------
+[debug] [2020-12-18T15:29:32.234Z] 
+[debug] [2020-12-18T15:29:32.246Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-12-18T15:29:32.248Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\suyamaed\Documents\Desarrollo\Udemy\React-Complete-Guide\burguer-builder
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2020-12-18T15:29:40.290Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-12-18T15:29:40.290Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-12-18T15:29:40.465Z] <<< HTTP RESPONSE 200 {"date":"Fri, 18 Dec 2020 15:29:40 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-18T15:29:40.477Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?pageSize=100  
+ 
+[debug] [2020-12-18T15:29:40.542Z] Server Error. tunneling socket could not be established, statusCode=407
+[debug] [2020-12-18T15:29:40.545Z] FirebaseError: Server Error. tunneling socket could not be established, statusCode=407
+    at Request._callback (C:\Users\suyamaed\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:32:31)
+    at self.callback (C:\Users\suyamaed\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:315:20)
+    at Request.EventEmitter.emit (domain.js:483:12)
+    at Request.onRequestError (C:\Users\suyamaed\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:877:8)
+    at ClientRequest.emit (events.js:315:20)
+    at ClientRequest.EventEmitter.emit (domain.js:483:12)
+    at ClientRequest.onConnect (C:\Users\suyamaed\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\tunnel-agent\index.js:168:23)
+    at Object.onceWrapper (events.js:422:26)
+    at ClientRequest.emit (events.js:315:20)
+    at ClientRequest.EventEmitter.emit (domain.js:483:12)
+    at Socket.socketOnData (_http_client.js:503:11)
+    at Socket.emit (events.js:315:20)
+    at Socket.EventEmitter.emit (domain.js:483:12)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:271:9)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
